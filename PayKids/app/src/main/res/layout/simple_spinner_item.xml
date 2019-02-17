@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical">
 
-    <com.dpagliotto.gimb.components.CustomTextView
+    <com.dpagliotto.paykids.components.CustomTextView
         android:id="@+id/text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

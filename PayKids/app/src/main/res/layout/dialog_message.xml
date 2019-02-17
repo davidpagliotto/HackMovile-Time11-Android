@@ -5,7 +5,7 @@
     android:background="@drawable/bg_fragment"
     android:padding="25dp">
 
-    <com.dpagliotto.gimb.components.CustomTextView
+    <com.dpagliotto.paykids.components.CustomTextView
         android:id="@+id/txtDialogMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

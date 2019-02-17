@@ -13,12 +13,12 @@
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
-        <com.dpagliotto.gimb.components.CustomTextView
+        <com.dpagliotto.paykids.components.CustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/saldo_disponivel" />
 
-        <com.dpagliotto.gimb.components.CustomEditText
+        <com.dpagliotto.paykids.components.CustomEditText
             android:id="@+id/edtDependenteHomeSaldo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="15dp" />
 
-        <com.dpagliotto.gimb.components.CustomButtonPrimary
+        <com.dpagliotto.paykids.components.CustomButtonPrimary
             android:id="@+id/btnDependenteHomePagar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

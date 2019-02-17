@@ -16,7 +16,7 @@
         android:paddingTop="3dp"
         android:paddingBottom="3dp">
 
-        <com.dpagliotto.gimb.components.CustomButtonClear
+        <com.dpagliotto.paykids.components.CustomButtonClear
             android:id="@+id/imgBtnButton"
             android:layout_width="match_parent"
             android:layout_height="36dp"

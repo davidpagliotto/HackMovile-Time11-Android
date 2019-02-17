@@ -8,27 +8,17 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     buildToolsVersion '28.0.3'
-    flavorDimensions "gimb"
-
-
-    signingConfigs {
-        release {
-            storeFile file('src/main/gimb_keystore.jks')
-            storePassword "G1mBP@ss"
-            keyAlias "gimb_key"
-            keyPassword "G1mBP@ss"
-        }
-    }
+    flavorDimensions "paykids"
 
     defaultConfig {
-        applicationId "com.dpagliotto.gimb"
+        applicationId "com.dpagliotto.paykids"
         minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
-        signingConfig signingConfigs.release
+
     }
 
     lintOptions {
@@ -38,11 +28,9 @@ android {
     buildTypes {
         release {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
             minifyEnabled false
         }
         debug {
-            signingConfig signingConfigs.release
             debuggable true
             jniDebuggable false
             renderscriptDebuggable false

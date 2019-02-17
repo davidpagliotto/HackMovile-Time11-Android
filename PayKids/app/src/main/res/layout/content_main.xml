@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_main_gradient"
     android:orientation="vertical"
-    tools:context="com.dpagliotto.gimb.view.MainActivity">
+    tools:context="com.dpagliotto.paykids.view.MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/content_toolbar"
@@ -44,7 +44,7 @@
             android:theme="@style/AppTheme.Progress"
             android:layout_centerInParent="true" />
 
-        <com.dpagliotto.gimb.components.CustomTextViewGIMBTitle
+        <com.dpagliotto.paykids.components.CustomTextViewPAYKIDSTitle
             android:id="@+id/txtMainProgressMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

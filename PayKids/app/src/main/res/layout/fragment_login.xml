@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.dpagliotto.gimb.components.CustomEditText
+            <com.dpagliotto.paykids.components.CustomEditText
                 android:id="@+id/edtLoginEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
                 android:textAlignment="center"
                 android:paddingBottom="20dp" />
 
-            <com.dpagliotto.gimb.components.CustomButtonPrimary
+            <com.dpagliotto.paykids.components.CustomButtonPrimary
                 android:id="@+id/btnLoginEntrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

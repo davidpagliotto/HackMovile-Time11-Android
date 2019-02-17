@@ -29,7 +29,7 @@
             android:padding="20dp"
             android:orientation="vertical">
 
-                <!-- <com.dpagliotto.gimb.components.CustomTextViewSecondary
+                <!-- <com.dpagliotto.paykids.components.CustomTextViewSecondary
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -41,7 +41,7 @@
                     android:layout_height="3dp"
                     android:background="@color/colorTextSecondary"/>
 
-                <com.dpagliotto.gimb.components.CustomTextViewSecondary
+                <com.dpagliotto.paykids.components.CustomTextViewSecondary
                     android:id="@+id/side_navigation_settlement"
                     android:layout_width="match_parent"
                     android:layout_height="25dp"

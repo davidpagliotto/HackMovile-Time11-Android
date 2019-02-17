@@ -8,7 +8,7 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
 
-    <com.dpagliotto.gimb.components.CustomTextViewPrimary
+    <com.dpagliotto.paykids.components.CustomTextViewPrimary
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -28,7 +28,7 @@
         android:layout_alignParentStart="true"
         android:paddingTop="@dimen/nav_header_vertical_spacing" />
 
-    <com.dpagliotto.gimb.components.CustomTextViewPrimary
+    <com.dpagliotto.paykids.components.CustomTextViewPrimary
         android:id="@+id/txtNavHeaderName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         android:text="Nome do cara"
         android:layout_alignParentStart="true" />
 
-    <com.dpagliotto.gimb.components.CustomTextViewPrimary
+    <com.dpagliotto.paykids.components.CustomTextViewPrimary
         android:id="@+id/txtNavHeaderEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
