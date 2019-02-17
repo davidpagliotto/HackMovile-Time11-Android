@@ -29,27 +29,50 @@
             android:padding="20dp"
             android:orientation="vertical">
 
-                <!-- <com.dpagliotto.paykids.components.CustomTextViewSecondary
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:textSize="15sp"
-                    android:text="@string/side_menu_financial" />
+            <com.dpagliotto.paykids.components.CustomTextViewSecondary
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="15sp"
+                android:text="@string/menu" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:background="@color/colorTextSecondary"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/colorTextSecondary"/>
 
-                <com.dpagliotto.paykids.components.CustomTextViewSecondary
-                    android:id="@+id/side_navigation_settlement"
-                    android:layout_width="match_parent"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="13dp"
-                    android:enabled="true"
-                    android:focusable="true"
-                    android:clickable="true"
-                    android:text="@string/side_menu_item_settlement"/> -->
+            <com.dpagliotto.paykids.components.CustomTextViewSecondary
+                android:id="@+id/side_navigation_solicitar_saldo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="7dp"
+                android:enabled="true"
+                android:focusable="true"
+                android:clickable="true"
+                android:text="@string/solicitar_mais_saldo"/>
+
+            <com.dpagliotto.paykids.components.CustomTextViewSecondary
+                android:id="@+id/side_navigation_extrato"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="7dp"
+                android:enabled="true"
+                android:focusable="true"
+                android:clickable="true"
+                android:text="@string/extrato"/>
+
+            <com.dpagliotto.paykids.components.CustomTextViewSecondary
+                android:id="@+id/side_navigation_dashboards"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="7dp"
+                android:enabled="true"
+                android:focusable="true"
+                android:clickable="true"
+                android:text="@string/dashboards"/>
 
         </LinearLayout>
 

@@ -1,10 +1,5 @@
 apply plugin: 'com.android.application'
 
-/*
-* Key Store Password: G1mBP@ss
-* Key Password: G1mBP@ss
-* */
-
 android {
     compileSdkVersion 26
     buildToolsVersion '28.0.3'
@@ -12,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.dpagliotto.paykids"
-        minSdkVersion 17
+        minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -61,6 +56,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.android.support:cardview-v7:26.1.0'
     implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     testImplementation 'junit:junit:4.12'
 }

@@ -1,8 +1,10 @@
 package com.dpagliotto.paykids.view;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +13,9 @@ import android.widget.Toast;
 import com.dpagliotto.paykids.R;
 import com.dpagliotto.paykids.components.CustomButtonPrimary;
 import com.dpagliotto.paykids.components.CustomEditText;
+import com.dpagliotto.paykids.db.dao.BaseDAO;
 import com.dpagliotto.paykids.model.Dependente;
+import com.dpagliotto.paykids.support.PermissionsHelper;
 import com.dpagliotto.paykids.view.helper.MaskWatcher;
 
 import java.util.Locale;
@@ -60,10 +64,21 @@ public class DependenteHomeFragment extends BaseFragment {
 
         btnPagamento.setEnabled(false);
         edtSaldo.setText("0");
-        if (dependente != null && dependente.getSaldo() > 0) {
-            edtSaldo.setText(String.format(Locale.getDefault(),"%f", dependente.getSaldo()));
-            btnPagamento.setEnabled(true);
+        if (dependente != null) {
+            BaseDAO dao = new BaseDAO(getActivity(), Dependente.class);
+            dependente = dao.buscaPorID(dependente.getId());
+
+            if (dependente != null) {
+                Log.v("QRScanner", dependente.getSaldo().toString());
+                if (dependente.getSaldo() > 0)
+                    edtSaldo.setText(Double.toString(dependente.getSaldo() * 10));
+                btnPagamento.setEnabled(true);
+            }
         }
+    }
+
+    public void setDependente(Dependente dependente) {
+        this.dependente = dependente;
     }
 
     private class Listener implements View.OnClickListener {
@@ -71,7 +86,13 @@ public class DependenteHomeFragment extends BaseFragment {
         @Override
         public void onClick(View view) {
             if (view == btnPagamento) {
-                Toast.makeText(getActivity(), "Ta pagando porra", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), QRCodeScannerActivity.class);
+
+                Bundle extras = new Bundle();
+                extras.putParcelable("DEP", dependente);
+                intent.putExtras(extras);
+
+                getActivity().startActivity(intent);
             }
         }
     }

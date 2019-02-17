@@ -24,6 +24,7 @@ import com.dpagliotto.paykids.model.BaseModel;
 import com.dpagliotto.paykids.model.Dependente;
 import com.dpagliotto.paykids.model.Titular;
 import com.dpagliotto.paykids.support.AppHelper;
+import com.dpagliotto.paykids.support.PermissionsHelper;
 import com.dpagliotto.paykids.view.helper.Helper;
 import com.facebook.stetho.Stetho;
 
@@ -42,8 +43,6 @@ public class MainActivity extends BaseActivity {
 
     private Handler mHandler;
 
-    //private static MainActivity instance;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +51,6 @@ public class MainActivity extends BaseActivity {
         Stetho.initializeWithDefaults(this);
 
         AppHelper.mApplicationContext = getApplicationContext();
-        //GPSService.instantiate(this);
-        //instance = this;
 
         // Config Toolbar
         {
@@ -93,6 +90,8 @@ public class MainActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
 
+        PermissionsHelper.checkAllPermissions(this);
+
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String perfil = preferences.getString(getString(R.string.perfil), "");
         if (perfil != null && perfil.trim().length() > 0) {
@@ -100,14 +99,14 @@ public class MainActivity extends BaseActivity {
             List<Titular> titulares = dao.listarTodos();
             if (titulares != null && titulares.size() > 0) {
                 if ("TIT".equalsIgnoreCase(perfil)) { // Perfil de titular
-                    selectFragment(Helper.OPT_TITULAR_HOME_FRAGMENT);
+                    selectFragment(Helper.OPT_TITULAR_HOME_FRAGMENT, null);
                     setUserData(titulares.get(0));
                 } else if ("DEP".equalsIgnoreCase(perfil)) { // Perfil de Dependente
-                    selectFragment(Helper.OPT_DEPENDENTE_HOME_FRAGMENT);
-
                     for (Dependente dependente: titulares.get(0).getDependentes()) {
                         if (dependente.getEmail().equalsIgnoreCase(preferences.getString(getString(R.string.email), ""))) {
                             setUserData(dependente);
+                            selectFragment(Helper.OPT_DEPENDENTE_HOME_FRAGMENT, dependente);
+                            break;
                         }
                     }
                 }
@@ -149,7 +148,7 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    private void selectFragment(Integer option) {
+    private void selectFragment(Integer option, Dependente dependente) {
         if (mLayoutProgress.getVisibility() == View.VISIBLE) return;
 
         Fragment fragment = null;
@@ -161,6 +160,7 @@ public class MainActivity extends BaseActivity {
         else if (option.equals(Helper.OPT_DEPENDENTE_HOME_FRAGMENT)) {
             setTitle("home");
             fragment = DependenteHomeFragment.getInstance();
+            ((DependenteHomeFragment) fragment).setDependente(dependente);
         }
 
         if (mCurrentFragment != fragment) {

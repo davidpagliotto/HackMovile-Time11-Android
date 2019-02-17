@@ -52,6 +52,8 @@ public class Dependente extends BaseModel implements Parcelable {
         telefone = in.readString();
         email = in.readString();
         idzoop = in.readString();
+        saldo = in.readDouble();
+        titular = in.readParcelable(Titular.class.getClassLoader()  );
     }
 
     public static final Creator<Dependente> CREATOR = new Creator<Dependente>() {
@@ -84,6 +86,8 @@ public class Dependente extends BaseModel implements Parcelable {
         parcel.writeString(telefone);
         parcel.writeString(email);
         parcel.writeString(idzoop);
+        parcel.writeDouble(saldo);
+        parcel.writeParcelable(titular, i);
     }
 
     public Integer getId() {
