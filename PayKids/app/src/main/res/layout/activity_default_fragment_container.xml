@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_gradient"
+    tools:context=".view.DefaultFragmentContainerActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/defaultContainerAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.dpagliotto.gimb.components.CustomToolBar
+            android:id="@+id/fragmentContainerToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/defaultContainerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/defaultContainerAppBar"
+        android:layout_centerInParent="true"
+        android:padding="15dp"
+        android:layout_margin="15dp">
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/defaultLayoutProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#dc000000"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:id="@+id/defaultPbMainProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:theme="@style/AppTheme.Progress" />
+
+        <com.dpagliotto.gimb.components.CustomTextViewGIMBTitle
+            android:id="@+id/defaulttxtMainProgressMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/defaultPbMainProgress"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:lines="3"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

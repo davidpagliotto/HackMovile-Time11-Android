@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name" translatable="false">PROJETO</string>
+    <string name="app_name_lower" translatable="false">projeto</string>
+
+    <string name="email">email</string>
+    <string name="entrar">entrar</string>
+    <string name="telefone">telefone</string>
+    <string name="sobrenome">sobrenome</string>
+    <string name="nome">nome</string>
+    <string name="registrar">registrar</string>
+    <string name="abrir">abrir</string>
+    <string name="fechar">fechar</string>
+    <string name="confirmar">confirmar</string>
+    <string name="sim">sim</string>
+    <string name="nao">nao</string>
+    <string name="cancelar">cancelar</string>
+    <string name="cpf">cpf</string>
+    <string name="perfil">perfil</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="saldo_disponivel">saldo disponível</string>
+    <string name="realizar_pagamento">realizar pagamento</string>
+</resources>

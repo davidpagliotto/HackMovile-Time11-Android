@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:id="@+id/containerDialogImgButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_dialog_button_neutral"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp">
+
+        <com.dpagliotto.gimb.components.CustomButtonClear
+            android:id="@+id/imgBtnButton"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            android:text="@android:string/untitled"
+            android:textColor="@color/colorTextPrimary"
+            android:textAllCaps="false"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

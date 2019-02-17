@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorStartGradient">#ff585a</color>
+    <color name="colorCenterGradient">#ff585a</color>
+    <color name="colorEndGradient">#f857a5</color>
+    <color name="colorStartGradientTopTransp">#D9FF585A</color>
+    <color name="colorCenterGradientTopTransp">#D9FF585A</color>
+    <color name="colorEndGradientTopTransp">#f857a5</color>
+    <color name="colorStartGradientContentTransp">#A6FF585A</color>
+    <color name="colorCenterGradientContentTransp">#A6FF585A</color>
+    <color name="colorEndGradientContentTransp">#A6F857A5</color>
+
+    <color name="colorPrimary">#c61c30</color>
+    <color name="colorPrimaryDark">#8e0009</color>
+    <color name="colorAccent">#737676</color>
+    <color name="colorAccentLight">#a4a6a6</color>
+    <color name="colorButtonNeutral">#737676</color>
+    <color name="colorBackgroundFragment">#ffffff</color>
+    <color name="colorTextPrimary">#ffffff</color>
+    <color name="colorTextSecondary">#c61c30</color>
+    <color name="colorTextEdit">#737676</color>
+    <color name="colorTextEditHint">#7d737676</color>
+</resources>
