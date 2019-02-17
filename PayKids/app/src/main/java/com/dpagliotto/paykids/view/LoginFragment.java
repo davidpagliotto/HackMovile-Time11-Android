@@ -277,7 +277,7 @@ public class LoginFragment extends BaseFragment {
                         .setIdzoop(map.get("idzoop") == null ? "" : map.get("idzoop").toString());
 
                 BaseDAO dao = new BaseDAO(getActivity(), Titular.class);
-                if (dao.createOrUpdate(titular)) {
+                if (dao.criarOuAtualizar(titular)) {
                     if (map.get("cartao") != null && map.get("cartao") instanceof Map) {
                         Map mapCartao = (Map) map.get("cartao");
                         Cartao cartao = new Cartao()
@@ -290,10 +290,10 @@ public class LoginFragment extends BaseFragment {
                                 .setTokenzoop(mapCartao.get("tokenzoop") == null ? "" : mapCartao.get("tokenzoop").toString());
 
                         BaseDAO daoCartao = new BaseDAO(getActivity(), Cartao.class);
-                        daoCartao.createOrUpdate(cartao);
+                        daoCartao.criarOuAtualizar(cartao);
 
                         titular.setCartao(cartao);
-                        dao.createOrUpdate(titular);
+                        dao.criarOuAtualizar(titular);
                     }
                     if (map.get("dependentes") != null && map.get("dependentes") instanceof List) {
                         for (Object objMap : ((List) map.get("dependentes"))) {
@@ -309,7 +309,7 @@ public class LoginFragment extends BaseFragment {
                                     .setTitular(titular);
 
                             BaseDAO daoDependente = new BaseDAO(getActivity(), Dependente.class);
-                            daoDependente.createOrUpdate(dependente);
+                            daoDependente.criarOuAtualizar(dependente);
                         }
                     }
                 }

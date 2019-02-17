@@ -19,7 +19,6 @@ import com.budiyev.android.codescanner.ScanMode;
 import com.dpagliotto.paykids.R;
 import com.dpagliotto.paykids.db.dao.BaseDAO;
 import com.dpagliotto.paykids.model.Dependente;
-import com.dpagliotto.paykids.support.HTTPHelper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.zxing.Result;
@@ -27,7 +26,6 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.SyncHttpClient;
 
 import java.util.HashMap;
-import java.util.Map;
 
 import androidx.annotation.NonNull;
 import cz.msebera.android.httpclient.Header;
@@ -182,7 +180,7 @@ public class QRCodeScannerActivity extends AppCompatActivity {
                     dependente.setSaldo(map.get("saldo") == null ? 0.0 : (Double) map.get("saldo"));
                     Log.v("QRScanner", dependente.getSaldo().toString());
                     BaseDAO daoDependente = new BaseDAO(QRCodeScannerActivity.this, Dependente.class);
-                    daoDependente.createOrUpdate(dependente);
+                    daoDependente.criarOuAtualizar(dependente);
 
                     QRCodeScannerActivity.this.finish();
                 }

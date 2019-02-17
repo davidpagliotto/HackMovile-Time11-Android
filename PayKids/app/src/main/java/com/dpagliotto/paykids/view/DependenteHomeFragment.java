@@ -20,9 +20,6 @@ import com.dpagliotto.paykids.view.helper.MaskWatcher;
 
 import java.util.Locale;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class DependenteHomeFragment extends BaseFragment {
 
     private static DependenteHomeFragment instance;

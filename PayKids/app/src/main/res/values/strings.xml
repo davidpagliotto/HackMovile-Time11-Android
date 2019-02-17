@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name" translatable="false">PROJETO</string>
-    <string name="app_name_lower" translatable="false">projeto</string>
+    <string name="app_name" translatable="false">Pay Kids</string>
+    <string name="app_name_lower" translatable="false">Pay Kids</string>
 
     <string name="email">email</string>
     <string name="entrar">entrar</string>

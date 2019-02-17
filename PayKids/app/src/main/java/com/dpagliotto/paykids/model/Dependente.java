@@ -6,10 +6,6 @@ import android.os.Parcelable;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-/**
- * Created by davidpagliotto on 27/07/17.
- */
-
 @DatabaseTable(tableName = "dependente")
 public class Dependente extends BaseModel implements Parcelable {
 

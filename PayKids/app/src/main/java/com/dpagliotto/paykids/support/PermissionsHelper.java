@@ -7,10 +7,6 @@ import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 
-/**
- * Created by davidpagliotto on 03/08/17.
- */
-
 public class PermissionsHelper {
 
     private static void requestPermission(Activity activity, String permission) {

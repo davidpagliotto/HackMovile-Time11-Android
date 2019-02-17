@@ -13,9 +13,7 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-/**
- * Created by davidpagliotto on 29/07/17.
- */
+
 
 public class DBManager {
     private static final String TAG = DBManager.class.getName();

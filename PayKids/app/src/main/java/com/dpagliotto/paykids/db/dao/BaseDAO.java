@@ -6,17 +6,12 @@ import android.util.Log;
 import com.dpagliotto.paykids.db.helper.DBManager;
 import com.dpagliotto.paykids.model.BaseModel;
 import com.j256.ormlite.dao.Dao;
-import com.j256.ormlite.dao.ForeignCollection;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 import java.lang.reflect.Field;
 import java.sql.SQLException;
 import java.util.List;
-
-/**
- * Created by davidpagliotto on 29/07/17.
- */
 
 public class BaseDAO {
 
@@ -59,32 +54,7 @@ public class BaseDAO {
         return null;
     }
 
-    public void deleteAll(ForeignCollection<? extends BaseModel> list) {
-        if (list != null && list.size() > 0) {
-            for (BaseModel obj : list) {
-                delete(obj);
-            }
-        }
-    }
-
-    public void deleteAll(List<? extends BaseModel> list) {
-        if (list != null && list.size() > 0) {
-            for (BaseModel obj : list) {
-                delete(obj);
-            }
-        }
-    }
-
-    public boolean deleteAll() {
-        try {
-            return dao.delete(dao.deleteBuilder().prepare()) > 0;
-        } catch (SQLException e) {
-            Log.e("", e.getMessage());
-        }
-        return false;
-    }
-
-    public boolean delete(Object object) {
+    public boolean excluir(Object object) {
         try {
             return dao.delete(object) == 1;
         } catch (SQLException e) {
@@ -93,7 +63,7 @@ public class BaseDAO {
         return false;
     }
 
-    public boolean create(Object object) {
+    public boolean criar(Object object) {
         try {
             object = setSequenceID((BaseModel) object);
             return dao.create(object) > 0;
@@ -104,7 +74,7 @@ public class BaseDAO {
         return false;
     }
 
-    public boolean createOrUpdate(Object object) {
+    public boolean criarOuAtualizar(Object object) {
         try {
             object = setSequenceID((BaseModel) object);
             Dao.CreateOrUpdateStatus status = dao.createOrUpdate(object);
@@ -114,29 +84,6 @@ public class BaseDAO {
         }
 
         return false;
-    }
-
-    public boolean createAll(List<? extends BaseModel> list) {
-        DBManager.getInstance(mContext).getDb().beginTransaction();
-
-        boolean errorOnCreate = false;
-        try {
-            for (Object object : list) {
-                if (!createOrUpdate(object)) {
-                    errorOnCreate = true;
-                    break;
-                }
-            }
-        } catch (Exception e) {
-            Log.e("", e.getMessage());
-        }
-
-        if (!errorOnCreate)
-            DBManager.getInstance(mContext).getDb().setTransactionSuccessful();
-
-        DBManager.getInstance(mContext).getDb().endTransaction();
-
-        return !errorOnCreate;
     }
 
     public boolean executeSQL(String sql) {

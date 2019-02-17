@@ -12,11 +12,6 @@ public class CustomDialogButtonData {
 
     private View.OnClickListener buttonClickListener;
 
-    public CustomDialogButtonData(CustomDialogButtonTypeEnum typeEnum, int resButtonText) {
-        this.typeEnum = typeEnum;
-        this.resButtonText = resButtonText;
-    }
-
     public CustomDialogButtonData(CustomDialogButtonTypeEnum typeEnum, int resButtonText, View.OnClickListener buttonClickListener) {
         this.typeEnum = typeEnum;
         this.resButtonText = resButtonText;

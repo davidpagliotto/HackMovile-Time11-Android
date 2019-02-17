@@ -10,10 +10,6 @@ import com.j256.ormlite.table.DatabaseTable;
 
 import java.util.List;
 
-/**
- * Created by davidpagliotto on 27/07/17.
- */
-
 @DatabaseTable(tableName = "titular")
 public class Titular extends BaseModel implements Parcelable {
 

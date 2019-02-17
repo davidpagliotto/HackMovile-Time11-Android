@@ -30,18 +30,6 @@ public class MaskWatcher implements TextWatcher {
         return new MaskWatcher("###.###.###-##", text);
     }
 
-    public static MaskWatcher buildCnpj(EditText text) {
-        return new MaskWatcher("##.###.###/####-##", text);
-    }
-
-    public static MaskWatcher buildData(EditText text) {
-        return new MaskWatcher("##/##/####", text);
-    }
-
-    public static MaskWatcher buildCartaoCredito(EditText text) {
-        return new MaskWatcher("####-####-####-####", text);
-    }
-
     public static MaskWatcher buildTelefone(EditText text) {
         return new MaskWatcher("(##)#####-####", text);
     }

@@ -23,7 +23,6 @@ import com.dpagliotto.paykids.db.dao.BaseDAO;
 import com.dpagliotto.paykids.model.BaseModel;
 import com.dpagliotto.paykids.model.Dependente;
 import com.dpagliotto.paykids.model.Titular;
-import com.dpagliotto.paykids.support.AppHelper;
 import com.dpagliotto.paykids.support.PermissionsHelper;
 import com.dpagliotto.paykids.view.helper.Helper;
 import com.facebook.stetho.Stetho;
@@ -49,8 +48,6 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         Stetho.initializeWithDefaults(this);
-
-        AppHelper.mApplicationContext = getApplicationContext();
 
         // Config Toolbar
         {

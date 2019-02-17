@@ -4,10 +4,6 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-/**
- * Created by davidpagliotto on 19/08/17.
- */
-
 public class BaseFragment extends Fragment {
 
     @Override

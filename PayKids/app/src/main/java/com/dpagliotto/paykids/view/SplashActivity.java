@@ -34,6 +34,6 @@ public class SplashActivity extends BaseActivity {
                         overridePendingTransition(R.transition.fade_in, R.transition.fade_out);
                         finish();
                     }
-                }, 1000);
+                }, 2000);
     }
 }

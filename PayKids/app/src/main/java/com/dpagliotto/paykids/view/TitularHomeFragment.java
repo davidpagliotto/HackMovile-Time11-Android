@@ -9,9 +9,6 @@ import android.view.ViewGroup;
 
 import com.dpagliotto.paykids.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class TitularHomeFragment extends BaseFragment {
 
     private static TitularHomeFragment instance;
